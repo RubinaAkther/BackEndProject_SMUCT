@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const productRoute = require('./routes/product.route.js');
+const userRoute = require('./routes/user.route.js');
+const orderRoute = require('./routes/order.route.js');
 const app = express();
 
 // middleware
@@ -10,6 +12,8 @@ app.use(express.json());
 
 // routes
 app.use('/api/products', productRoute);
+app.use('/api/users', userRoute);
+app.use('/api/orders', orderRoute);
 
 app.listen(3000, () => {
   console.log('server is running on port http://localhost:3000/');

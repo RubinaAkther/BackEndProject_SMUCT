@@ -24,10 +24,10 @@ const OrderSchema = mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now,
+     default: Date.now,
   },
 });
 
 const Order = mongoose.model('Order', OrderSchema);
 
-module.exports = Order;
+module.exports = Order;  

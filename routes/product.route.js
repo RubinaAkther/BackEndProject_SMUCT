@@ -9,6 +9,7 @@ const {
 } = require('../controllers/product.controllers.js');
 
 router.get('/', getProducts);
+
 router.get('/:id', getProduct);
 
 router.post('/', createProduct);
